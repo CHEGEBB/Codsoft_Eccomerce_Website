@@ -8,7 +8,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/products/${id}`);
+        const response = await fetch(`https://codsoft-eccomerce-website-backend2.onrender.com/products/${id}`);
         const data = await response.json();
         setProduct(data);
       } catch (error) {
