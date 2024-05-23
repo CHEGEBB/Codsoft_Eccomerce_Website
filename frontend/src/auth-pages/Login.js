@@ -33,7 +33,7 @@ const Login = () => {
 
 
     try {
-      const response = await fetch('http://localhost:3000/auth/login', { // Assuming your backend API endpoint is '/auth/login'
+      const response = await fetch('https://codsoft-eccomerce-website-backend2.onrender.com/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,14 +44,14 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         const { token } = data;
-        localStorage.setItem('token', token); // Store the token in local storage
-        navigate('/home'); // Redirect to the home page or any other authenticated route
+        localStorage.setItem('token', token); 
+        navigate('/home'); 
       } else {
-        alert('Invalid email or password'); // Handle invalid credentials
+        alert('Invalid email or password');
       }
     } catch (error) {
       console.error('Login failed:', error.message);
-      alert('Login failed. Please try again later.'); // Handle other errors
+      alert('Login failed. Please try again later.');
     }
   };
 
