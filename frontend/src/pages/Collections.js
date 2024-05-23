@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useCallback } from "react";
 import LeftSideBar from "../components/LeftSideBar";
 import "./Collections.scss";
 import wishlistIcon from "../images/us/icon-park-solid--love-and-help.svg";
@@ -6,7 +6,7 @@ import cartIcon from "../images/ic--round-shopping-cart.svg";
 import Footer from "../components/Footer";
 import Nav from "../components/Navbar";
 import Modal from "../components/Modal";
-import { useNavigate,useCallback } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 const Collections = () => {
