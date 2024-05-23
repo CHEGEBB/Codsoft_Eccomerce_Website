@@ -1,7 +1,7 @@
 {
   "name": "glamour-gallerie",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://CHEGEBB.github.io/Codsoft_Eccomerce_Website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
