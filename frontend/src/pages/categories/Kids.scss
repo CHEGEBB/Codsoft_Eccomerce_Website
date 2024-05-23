@@ -1,0 +1,146 @@
+$ropa: 'Ropa Sans', sans-serif;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$celestialOrange: #FF6F61;
+$greyish: #555555;
+$jost: 'Jost', sans-serif;
+
+.kids-page {
+  width: 100%;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    color: #FF6F61;
+    text-decoration:double underline;
+    font-family: $jost;
+  }
+}
+
+.kids-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.kids-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.kids-item-container {
+  width: calc(33.33% - 10px); 
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.item-discount-kids {
+  position: absolute;
+  right: 5px;
+  background-color: $celestialOrange;
+  color: #fff;
+  padding: 3px 8px; 
+  border-radius: 5px;
+  font-family: $ropa;
+  margin-top: 15px;
+}
+
+.item-discount-kids:hover {
+  background-color: blueviolet;
+  transition: 0.5s;
+}
+
+.item-image {
+  position: relative;
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: $frosted-glass;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.kids-item-container:hover .item-overlay {
+  opacity: 1;
+}
+
+.wish img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.add-to-cart-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.add-to-cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $celestialOrange;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: $ropa;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 200px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: blueviolet;
+  transition: 0.5s;
+}
+
+.discounted-price-kids {
+  display: none;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+}
+
+.previous-price {
+  text-decoration: line-through;
+  margin-right: 5px;
+  color: $greyish;
+  font-size: 20px;
+  font-family: $ropa;
+  font-weight: 500;
+}
+
+.current-price {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: $ropa;
+  margin-left: 5px;
+  color: crimson;
+}
+
+.kids-item-container:hover .item-overlay {
+  opacity: 1;
+}
+.item-info-kids{
+  padding: 10px;
+  margin-top: -10px;
+  height: 200px;
+}

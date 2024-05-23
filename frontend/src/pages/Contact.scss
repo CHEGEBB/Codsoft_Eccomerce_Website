@@ -1,0 +1,115 @@
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$background-image1: url("./images/wom2.jpg");
+$women-background-image: url("./images/wom2.jpg");
+$mens-background-image: url("./images/pic.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$silver: #C0C0C0;
+.contact-container {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+
+
+    .background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 0;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 1;
+        border: 2px solid white;
+        width: 550px;
+        padding: 20px;
+        height: 650px;
+        border-radius: 15px;
+
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                font-family: $ropa;
+            }
+            p{
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+                font-family: $jost;
+            }
+
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+
+            .form-group {
+                margin-bottom: 20px;
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 15px;
+                    border: 2px solid #ddd;
+                    border-radius: 8px;
+                    background-color: #f9f9f9;
+                    font-size: 16px;
+                    color: #333;
+                    transition: border-color 0.3s;
+                    font-family: $jost;
+
+                    &:focus {
+                        outline: none;
+                        border-color: #007bff;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                }
+            }
+
+            button {
+                display: block;
+                width: 100%;
+                padding: 15px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+        }
+    }
+}

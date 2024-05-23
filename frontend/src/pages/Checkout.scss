@@ -1,0 +1,128 @@
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$silver: #C0C0C0;
+$women-background-image: url("../images/wom.jpg");
+$mens-background-image: url("../images/style2.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$softpink: #FFC0CB;
+$darkpink: #FF007F;
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    background-color: $special;
+
+}
+.checkout-container {
+    max-width: 40%;
+    margin-top: -50px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $darkpink;
+    color: #fff;
+    font-family: $jost;
+    font-size: 18px;
+}
+
+.checkout-title {
+    font-family: $island;
+    font-size: 36px;
+    color: $celestialOrange;
+    margin-bottom: 20px;
+}
+
+.checkout-form {
+   display: flex;
+   flex-direction: column;
+}
+
+.checkout-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $darkpink;
+    border-radius: 5px;
+    background-color: $white;
+    font-family: $jost;
+    color: $special;
+    transition: box-shadow 0.3s ease;
+}
+
+.checkout-input:focus {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method {
+    margin-top: 20px;
+
+    img{
+        height: 40px;
+        width: 50px;
+        filter:invert(1);
+    }
+}
+
+.payment-method-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-method-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-method-option img {
+    margin-left: 5px;
+    height: 40px;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    background-color: $celestialOrange;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: $jost;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: darken($celestialOrange, 10%);
+}
+
+// Animations
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.success-message {
+    text-align: center;
+    background: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}

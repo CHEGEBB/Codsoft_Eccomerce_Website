@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Jost:ital,wght@0,100..900;1,100..900&family=Ropa+Sans:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$background-image1: url("./images/wom2.jpg");
+$women-background-image: url("./images/wom2.jpg");
+$mens-background-image: url("./images/pic.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$silver: #C0C0C0;
+@mixin shop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+  height: 400px;
+  width:600px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+  // overflow-y: scroll;
+  overflow-x: hidden;
+}

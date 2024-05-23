@@ -1,0 +1,124 @@
+$greyish: #555555;
+$celestialOrange: #FF6F61;
+$common-height: 80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special: #141C27;
+$jost: 'Jost', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island: 'Island Moments', cursive;
+$Rubik: 'Rubik', sans-serif;
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.categories-bar {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  width: 195px;
+  padding: 20px;
+  background-color: $special;
+  margin-left: -20px;
+  margin-top: -20px;
+
+  h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: $celestialOrange;
+    font-family: $ropa;
+    font-weight: 700;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #f4f4f4;
+    font-family: $jost;
+    font-size: 18px;
+    font-weight: 500;
+
+
+    li {
+      font-size: 14px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+
+      a{
+        text-decoration: none;
+        color: #fff;
+      
+      }
+
+      &:hover {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        color: #00CED1;
+      }
+    }
+  }
+}
+
+.filters {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: $jost;
+  color: $special;
+  font-weight: 500;
+
+  .filter-item {
+    margin-bottom: 15px;
+
+    h4 {
+      margin-bottom: 5px;
+      font-family: $ropa;
+      color: crimson;
+    }
+
+    .square-radio {
+      display: flex;
+      align-items: center; 
+      margin-bottom: 5px;
+
+      input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #666;
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+
+      input[type="radio"]:checked {
+        background-color: #666;
+      }
+    }
+  }
+  .filter-item input[type="range"] {
+    width: 130px;
+  }
+
+  input[type="range"],
+  select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+}

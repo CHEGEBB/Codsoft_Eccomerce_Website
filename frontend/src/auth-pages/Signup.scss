@@ -1,0 +1,271 @@
+
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$special:#141C27;
+$silver: #C0C0C0;
+$women-background-image: url("../images/wom.jpg");
+$mens-background-image: url("../images/style2.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$softpink: #FFC0CB;
+$darkpink: #FF007F;
+.signup-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .overlay {
+    background-color: rgba(29, 137, 204, 0.6);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .success {
+    position: fixed;
+    width: 500px;
+    height: 180px;
+    z-index: 45;
+    align-items: center;
+    justify-content: center;
+    margin-top: -370px;
+    margin-left: 80px; 
+    background-color: rgba(117, 54, 99, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform: translateY(-100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    font-family: $jost;
+    padding: 20px;
+      button{
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        &:hover {
+          background-color: $softpink;
+        }
+      
+      }
+  }
+  
+  .success.hide {
+    transform: translateY(-100%);
+  }
+  
+
+  .card {
+    border-radius: 10px;
+    padding: 0px;
+    z-index: 1;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+    position: relative;
+    border: 2px solid $darkpink; 
+    border-radius: 17px;
+  }
+
+  .right {
+    flex: 1; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1; 
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .overlaytwo{
+    background-color: rgba(157, 170, 172, 0.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 2;
+  }
+
+  .left-container {
+    padding: 40px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: relative;
+    z-index: 1;
+    width: 350px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    .horizontal-nav {
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        font-family: $ropa;
+        font-size: 20px;
+      }
+    
+      ul li {
+        margin-right: 20px;
+        transition: all 0.3s ease;
+      }
+    
+      ul li:last-child {
+        margin-right: 0;
+      }
+    
+      ul li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 5px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $darkpink;
+        }
+
+        &.active {
+          font-weight: bold;
+          width: 90px;
+          background-color: transparent;
+         
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            transition: width 0.3s ease;
+            background-color: $darkpink;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+    
+
+
+    .signup-form {
+      h2 {
+        font-size: 24px;
+        margin-top: 15px;
+        font-family: $ropa;
+        color: $darkpink;
+      }
+
+      .form-group {
+        margin-top: 20px;
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-family: $jost;
+        }
+        input {
+          width: 270px;
+          padding: 10px;
+          border: 1px solid $softpink;
+          border-radius: 5px;
+          font-family: $jost;
+          outline: none;
+
+          &:hover {
+            border: 1px solid $darkpink;
+          }
+
+          &::placeholder {
+            color: $placeholder-color;
+          }
+        
+        &.error {
+          input {
+            border: 1px solid red;
+          }
+        }
+      }
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #FF007F;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 50px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+    
+      .login-link {
+        margin-top: 20px;
+        font-family: $jost;
+
+        a {
+          text-decoration: none;
+          color: #007bff;
+          font-family: $jost;
+
+          &:hover {
+            text-decoration: underline;
+
+          }
+        }
+      }
+    }
+  }
+}
+.welcome-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 20px; 
+  color: white; 
+  text-align: center;
+  margin-top: 200px;
+
+   h2{
+    font-size: 20px;
+    font-family: $ropa;
+    color: #FF007F;
+   }
+    p{
+      font-family: $jost;
+      font-size: 16px;
+    }
+}

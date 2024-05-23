@@ -1,0 +1,1047 @@
+
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$silver: #C0C0C0;
+$women-background-image: url("../images/wom.jpg");
+$mens-background-image: url("../images/style2.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+$softpink: #FFC0CB;
+$darkpink: #FF007F;
+
+  @mixin card-item{
+    width: 200px;
+    height: 250px;
+    background-color: crimson;
+    margin-top: 20px;
+  }
+  @mixin product-images{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @mixin us-icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 120px;
+  }
+
+
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #4B0082;
+    width: 400px;
+    margin-left: 100px;
+    font-family: $ropa;
+
+  }
+  .header{
+    margin-top: -200px;
+  }
+  
+  .paragraph {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: $white;
+    width: 500px;
+    margin-left: 400px;
+    display: none;
+  }
+  
+  .colored-paragraph {
+    font-size: 16px;
+    color:white;
+    margin-bottom: 20px;
+    width: 500px;
+    margin-left: 400px;
+    font-family: $jost;
+    font-weight: 700;
+    background-color: rgba(1,1,1,0.5);
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 6px solid white;
+    border: 2px solid $darkpink;
+    padding: 10px;
+    background-repeat: no-repeat;
+
+  }
+  
+  button {
+    background-color: $darkpink;
+    color: $white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 90px;
+    font-family: $ropa;
+  }
+  
+  button:hover {
+    background-color: darken($darkpink, 10%);
+  }
+  .header-container {
+    width: 100%;
+    width: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+/*Homepage component*/
+.Homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+      
+    }
+  }
+  
+  .home-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 700px;
+    width: 100%;
+    animation: zoomIn 5s ease infinite alternate;
+  }
+  .navigation{
+    margin-left: -1300px;
+    margin-top: 30px;
+  }
+  .home-intro h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: $darkpink;
+  }
+  
+  .home-intro p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .home-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -5px;
+    gap: 20px;
+    padding: 20px;
+    background-color: $silver;
+    font-family: $ropa;
+    width: 100%;
+    height: 500px;
+
+  }
+  .women-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    position: relative;
+    background-image: $women-background-image; 
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin-top: 40px;
+    border: 2px solid $darkpink;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  
+    &:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
+    }
+  
+    &:hover .text-container {
+      transform: translateY(-20px);
+    }
+  
+    &:hover .button {
+      transform: translateY(20px);
+    }
+  
+    &:hover:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      z-index: 1;
+    }
+    
+    .text-container {
+      transition: transform 0.5s ease; 
+    }
+  
+    .button {
+      transition: transform 0.5s ease;
+    }
+  }
+  
+  
+  .mens-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    position: relative;
+    background-image: $mens-background-image;
+    transition: transform 0.5s ease;
+    margin-top: 40px;
+    border: 2px solid $darkpink;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+
+    &:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
+    }
+  
+    &:hover .text-container {
+      transform: translateY(-20px);
+    }
+  
+    &:hover .button {
+      transform: translateY(20px);
+    }
+  
+    &:hover:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      z-index: 1;
+    }
+    
+    .text-container {
+      transition: transform 0.5s ease; 
+    }
+  
+    .button {
+      transition: transform 0.5s ease;
+    }
+  }
+  
+  .loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+    gap: 20px;
+    z-index: 100;
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+  
+  }
+  
+  .active {
+    background-color: $darkpink;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .heading,
+  .paragraph,
+  .colored-paragraph,
+  .animate button {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .heading {
+    animation-delay: 0.5s;
+  }
+  
+  .paragraph {
+    animation-delay: 1s;
+  }
+  
+  .colored-paragraph {
+    animation-delay: 1.5s;
+  }
+  
+  button {
+    animation-delay: 2s;
+  }
+  .welcome{
+    background-color: #000;
+    height: 500px;
+    color: white;
+    width: 100%;
+
+        h1{
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: $darkpink;
+            margin-top: 20px;
+            text-align: center;
+            font-family: $ropa;
+            
+
+        }
+        p{
+            font-size: 18px;
+            margin: 0;
+            color: $white;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 300px;
+            width: 700px;
+            font-family: $jost;
+        }
+
+  }
+  .items{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+        button{
+            background-color: $darkpink;
+            color: $white;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 40px;
+            padding: 10px 20px;
+            margin-top: 150px;
+        }
+        h3{
+            font-size: 18px;
+            color:#ffffff;
+            margin-top: 20px;
+            text-align: center;
+            font-family: $ropa;
+            background-color: rgb(1,1,1,0.2);
+            width: 90px;
+            height: 30px;
+            padding-top: 5px;
+            margin-left: 60px;
+            border-radius: 5px;
+        
+        }
+  }
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .dresses {
+    @include card-item;
+    background-image: url("../images/webp/women/c1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+    border: 1px solid $darkpink;
+    transition: border-color 0.3s ease;
+    background-repeat: no-repeat;
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
+  }
+  
+  .dresses:hover {
+    border-color: $darkpink;
+  }
+  
+  .watches {
+    @include card-item;
+    background-image: url("../images/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+    border: 1px solid $darkpink;
+    transition: border-color 0.3s ease;
+  }
+  
+  .watches:hover {
+    filter: contrast(100%);
+  }
+  
+  .shoes {
+    @include card-item;
+    background-image: url("../images/airmaxplus.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+    border: 1px solid $darkpink;
+    transition: border-color 0.3s ease;
+  }
+  
+  .shoes:hover {
+    box-shadow: 0px 0px 20px rgba(255, 111, 97, 1);
+  }
+  
+  .accessories {
+    @include card-item;
+    background-image: url("../images/acce3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 6s ease-in-out infinite alternate;
+    animation: zoomInOut 6s ease-in-out infinite alternate, fadeInOut 4s ease-in-out infinite alternate;
+    filter: contrast(80%);
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 3s ease-in-out infinite alternate;
+    border: 1px solid $darkpink;
+    transition: border-color 0.3s ease;
+
+  }
+  
+  .accessories:hover {
+    transform: rotate(5deg);
+  }
+  .featured{
+    display: flex;
+    flex-direction: column;
+    
+      h1{
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: $greyish;
+        margin-top: 20px;
+        text-align: center;
+        font-family: $ropa;
+      
+      }
+      p{
+        font-size: 18px;
+        margin: 0;
+        color: $greyish;
+        text-align: center;
+        margin-top: 10px;
+        font-family: $jost;
+      }
+  }
+  .products-row1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.products-row2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.products{
+    width: 200px;
+    height: 250px;
+    background-color: crimson;
+}
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  
+    h3 {
+      margin-top:180px;
+      color:$darkpink;
+      font-family: $ropa;
+      font-size: 1.5rem;
+      width: 190px;
+    }
+  
+    p {
+      margin: 5px 0;
+      color: $celestialOrange;
+      font-family: $ropa;
+      font-weight: bold;
+      width: 170px;
+      margin-left: -30px;
+
+    }
+  
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      background-color: $darkpink;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+  
+      img {
+        width: 20px;
+        margin-right: 5px;
+      }
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .products-row1, .products-row2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .product {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 250px;
+    height: 350px;
+    border: 2px solid $darkpink;
+  }
+  .product-image-1 {
+    background-image: url('../images/suit3.jpg');
+    @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
+  }
+  
+  .product-image-2 {
+    background-image: url('../images/women/dress3.jpg');
+    @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
+  }
+  
+  .product-image-3 {
+    background-image: url('../images/shoesrun.jpeg');
+    @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
+  }
+  
+  .product-image-4 {
+    background-image: url('../images/wrist.jpeg');
+    @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
+  }
+  
+  .product-image-5 {
+    background-image: url('../images/leather2.jpg');
+    @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
+  }
+  
+  .product-image-6 {
+    background-image: url('../images/fedora.jpeg');
+    @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
+  }
+  .product-image-7 {
+    background-image: url('../images/sunglasses.jpeg');
+    @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
+  }
+  .product-image-8 {
+    background-image: url('../images/belts.jpg');
+    @include product-images;
+    animation: zoomInOut 8s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    animation: zoomInOut 5s ease-in-out infinite alternate, fadeInOut 2s ease-in-out infinite alternate;
+    transition: transform 0.3s ease scale 1.1;
+  }
+  .about{
+    background-color: #333;
+    height: 590px;
+    width: 100%;
+  }
+.about {
+  text-align: center;
+  padding: 50px 0;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: $darkpink;
+    font-family: $ropa;
+    width: 800px;
+    margin-left: 270px;
+  }
+
+  p {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-family: $jost;
+
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    .image {
+      width: 300px;
+      height: 360px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 3s ease;
+      }
+    
+      &:hover img {
+        transform: rotate(5deg) scale(1.1);
+      }
+    }
+  }
+}
+.unique{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  // background-color: green;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 50px;
+  height: 600px;
+}
+.set-apart{
+  background-color: #666666;
+  width: 100%;
+  color: #fff;
+  height: 300px;
+    h1{
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: $darkpink;
+        margin-top: 20px;
+        text-align: center;
+        font-family: $ropa;
+    }
+}
+.DeliveryIcon img, .SupportIcon img,.DiscountIcon img,.SecurePaymentsIcon img{
+  @include us-icon;
+}
+.DeliveryIcon img:hover,
+.SupportIcon img:hover,
+.DiscountIcon img:hover,
+.SecurePaymentsIcon img:hover {
+  animation: iconHover 0.1s infinite alternate;
+}
+
+@keyframes iconHover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+.set-apart{
+  h2{
+    font-size: 25px;
+    color:#ffffff;
+    margin-top: 20px;
+    text-align: center;
+    font-family: $ropa;
+  }
+  p{
+    font-size: 18px;
+    margin: 0;
+    color: $white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: $jost;
+  }
+}
+// mobile design
+@media screen and (max-width: 768px) {
+ 
+  .homepage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 700px;
+    width: 100%;
+    animation: zoomIn 5s ease infinite alternate;
+
+    .navigation{
+      margin-left: 0;
+      margin-top: 10px;
+      text-align: center;
+      width: 300px;
+    
+    }
+    .home-intro {
+      height: auto;
+      padding: 20px;
+      animation: none;
+      height: 1000px;
+      margin-top: 1500px;
+
+      .text-container{
+        h1{
+          display: none;
+        }
+      }
+    }
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 1900px;
+    width: 100%;
+    animation: zoomIn 5s ease infinite alternate;
+    display: none;
+  }
+  .heading {
+    font-size: 1.5rem;
+    width: auto;
+    margin-left: 20px;
+    text-align: center;
+  }
+  
+  .header {
+    margin-top: 0;
+    padding: 20px;
+  }
+  
+  .paragraph, .colored-paragraph {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .colored-paragraph {
+    font-size: 14px;
+    padding: 5px;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .header-container {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .navigation {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .home-intro {
+    height: auto;
+    padding: 20px;
+    animation: none;
+  }
+  
+  .home-content {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    height: auto;
+  }
+  
+  .women-shop, .mens-shop {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .items {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .featured h1, .featured p {
+    font-size: 1.5rem;
+    margin: 0 20px;
+  }
+
+  .products-row1, .products-row2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .product {
+    width: 100%;
+    height: auto;
+    margin: 0 0 20px 0;
+  }
+  
+  .about h1, .about p {
+    width: auto;
+    margin: 0 20px;
+  }
+  
+  .set-apart h1, .set-apart h2, .set-apart p {
+    font-size: 1.5rem;
+    margin: 0 20px;
+  }
+
+  .DeliveryIcon img, .SupportIcon img, .DiscountIcon img, .SecurePaymentsIcon img {
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .welcome{
+    height: 1500px;
+    h1{
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: $darkpink;
+      margin-top: 20px;
+      text-align: center;
+      font-family: $ropa;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: $white;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: 20px;
+      width: 300px;
+      font-family: $jost;
+    }
+  }
+  .featured{
+    h1{
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: $greyish;
+      margin-top: 20px;
+      text-align: center;
+      font-family: $ropa;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: $greyish;
+      text-align: center;
+      margin-top: 10px;
+      font-family: $jost;
+    }
+  }
+  .product{
+    width: 300px;
+    h3{
+      font-size: 1rem;
+      color:$darkpink;
+      font-family: $ropa;
+      font-size: 1.5rem;
+      width: 190px;
+    }
+    p{
+      font-size: 12px;
+      margin: 5px 0;
+      color: $celestialOrange;
+      font-family: $ropa;
+      font-weight: bold;
+      width: 170px;
+      margin-left: -30px;
+    }
+    button{
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 10px;
+      background-color: $darkpink;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      img{
+        width: 20px;
+        margin-right: 5px;
+      }
+    }
+    .button-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .unique{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .set-apart{
+    h2{
+      font-size: 20px;
+      color:#ffffff;
+      margin-top: 20px;
+      text-align: center;
+      font-family: $ropa;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: $white;
+      text-align: center;
+      margin-top: 10px;
+      font-family: $jost;
+    }
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    .image {
+      width: 100px;
+      height: 50px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    
+      img {
+        width:100px;
+        height: 50px;
+        object-fit: cover;
+        transition: transform 3s ease;
+        display: none;
+      }
+    
+      &:hover img {
+        transform: rotate(5deg) scale(1.1);
+      }
+    }
+  }
+  .set-apart{
+    h2{
+      font-size: 20px;
+      color:#ffffff;
+      margin-top: 20px;
+      text-align: center;
+      font-family: $ropa;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      color: $white;
+      text-align: center;
+      margin-top: 10px;
+      font-family: $jost;
+    }
+  }
+}
+

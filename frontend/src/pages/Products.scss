@@ -1,0 +1,121 @@
+$greyish:#555555;
+$celestialOrange:#FF6F61;
+$common-height:80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$special:#141C27;
+$silver: #C0C0C0;
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island:'Island Moments', cursive;
+
+@mixin product-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin items-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    height: 400px;
+    background-color: $frosted-glass;
+    border-radius: 10px;
+    border: 1px solid #8FBC8F;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.02);
+    }
+}
+.products-page {
+    .product-card {
+      width: calc(33.33% - 20px);
+      margin: 10px;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      .product-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img {
+          max-width: 400px;
+          height: 500px;
+          overflow: hidden;
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+  
+      .product-info {
+        text-align: center;
+  
+        h2 {
+          margin-top: 10px;
+          font-size: 25px;
+          font-weight: bold;
+          font-family: $ropa;
+          color: #333;
+        }
+  
+        p {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #555;
+          font-family: $jost;
+          width: 350px;
+        }
+  
+        button {
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: crimson; 
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .product-card {
+        width: calc(50% - 20px);
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+  }
+  .products-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

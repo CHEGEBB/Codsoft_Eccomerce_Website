@@ -1,0 +1,115 @@
+$greyish: #555555;
+$celestialOrange: #FF6F61;
+$common-height: 80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$special: #141C27;
+$silver: #C0C0C0;
+$women-background-image: url("../images/wom.jpg");
+$mens-background-image: url("../images/style2.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island: 'Island Moments', cursive;
+$softpink: #FFC0CB;
+$darkpink: #FF007F;
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    max-width:60%;
+    max-height: 800px;
+    overflow-y: auto;
+
+    img{
+        width: 500px;
+        height: 700px;
+        overflow: hidden;
+        border-radius: 8px;
+
+    }
+}
+
+.close {    
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+    color: #999;
+    font-family: $jost;
+    z-index: 1;
+}
+.modal-btn button{
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: $jost;
+    font-size: 16px;
+    margin-top: -90px;
+    z-index: 200;
+    position: relative;
+    width: 200px;
+
+}
+
+.product-images {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: $darkpink;
+    font-size: 74px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 5px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.product-info {
+  
+    h2{
+        font-family: $ropa;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 16px;
+        font-family: $jost;
+        width: 500px;
+        margin-bottom:20px;
+    }
+}

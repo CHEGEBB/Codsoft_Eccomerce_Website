@@ -1,0 +1,110 @@
+$greyish: #555555;
+$celestialOrange: #FF6F61;
+$common-height: 80px;
+$placeholder-color: #999;
+$frosted-glass: rgba(255, 255, 255, 0.5);
+$special: #141C27;
+$silver: #C0C0C0;
+$women-background-image: url("../images/wom.jpg");
+$mens-background-image: url("../images/style2.jpg");
+$jost: 'Jost', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$ropa: 'Ropa Sans', sans-serif;
+$island: 'Island Moments', cursive;
+$softpink: #FFC0CB;
+$darkpink: #FF007F;
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:white; 
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: $jost;
+
+    }
+    @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideUp {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+      
+      .custom-alert {
+        animation: slideDown 0.5s forwards;
+      }
+      
+      .custom-alert .close-btn{
+        animation: slideUp 0.5s forwards;
+      }
+      
+      .close-btn {
+        background-color: #f8d7da; 
+        color: #721c24; 
+        border: none;
+        border-radius: 3px;
+        padding: 8px 15px;
+        cursor: pointer;
+      
+        &:hover {
+          background-color: #f5c6cb;
+        }
+      }
+  
+    .message {
+      flex: 1; 
+      margin-right: 10px; 
+    }
+  
+    .close-btn button{
+      background-color: #f8d7da; 
+      color: #721c24; 
+      border: none;
+      border-radius: 3px;
+      padding: 8px 15px;
+      cursor: pointer;
+      margin-left: -40px;
+      margin-top: 50px;
+  
+      &:hover {
+        background-color: #f5c6cb;
+      }
+    }
+    .buttons-container{
+      display: flex;
+      margin-top: 50px;
+      flex-direction: row;
+      gap: 20px;
+
+    }
+    .view-cart-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 8px 15px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  
