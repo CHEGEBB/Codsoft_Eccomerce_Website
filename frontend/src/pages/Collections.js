@@ -6,7 +6,7 @@ import cartIcon from "../images/ic--round-shopping-cart.svg";
 import Footer from "../components/Footer";
 import Nav from "../components/Navbar";
 import Modal from "../components/Modal";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useCallback } from "react-router-dom";
 import axios from 'axios';
 
 const Collections = () => {
