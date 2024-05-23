@@ -6,6 +6,8 @@ import cartIcon from "../images/ic--round-shopping-cart.svg";
 import Footer from "../components/Footer";
 import Nav from "../components/Navbar";
 import Modal from "../components/Modal";
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const Collections = () => {
   const [items, setItems] = useState([
@@ -446,6 +448,8 @@ const Collections = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
+  const navigate = useNavigate();
+
   const handleOpenModal = (item) => {
     setSelectedProduct(item);
     setIsModalOpen(true);
@@ -488,6 +492,55 @@ const Collections = () => {
   for (let i = 0; i < items.length; i += 3) {
     groupedItems.push(items.slice(i, i + 3));
   }
+  
+  useEffect(() => {
+    sendItemsToBackend();
+  }, []);
+
+  
+  const sendItemsToBackend = useCallback(async () => {
+    try {
+        const { data: existingItems } = await axios.get('https://codsoft-eccomerce-website-backend2.onrender.com/products');
+
+        // Create a set of existing item names and prices
+        const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
+
+        let allItemsSent = true;
+
+        for (const item of items) {
+            const itemNameAndPrice = `${item.name},${item.price}`;
+            if (!existingItemNamesAndPrices.has(itemNameAndPrice)) {
+                const response = await axios.post('https://codsoft-eccomerce-website-backend2.onrender.com/products', item);
+                console.log('Item sent to backend:', response.data);
+            } else {
+                allItemsSent = false;
+                console.log('Item already exists in the backend:', item.name);
+            }
+        }
+
+        if (allItemsSent) {
+            console.log('All items have been sent to the backend.');
+        } else {
+            console.log('Not all items have been sent to the backend.');
+        }
+    } catch (error) {
+        console.error('Error sending items to backend:', error);
+    }
+}, [items]);
+
+
+const handleAddToCart = async (item) => {
+  try {
+    const name = encodeURIComponent(item.name);
+    const category = encodeURIComponent(item.category);
+    const { data } = await axios.get(`https://codsoft-eccomerce-website-backend2.onrender.com/cart/add-to-cart/${name}/${item.price}/${category}`);
+    console.log('Item fetched from the backend:', data);
+    navigate('/cart', { state: { item: data } });
+  } catch (error) {
+    console.error('Error fetching item from the backend:', error);
+  }
+};
+
 
   return (
     <div className="collections-page">
@@ -530,9 +583,7 @@ const Collections = () => {
                         className="wishlist-icon"
                       />
                     </div>
-                    <button
-                      className="add-to-cart-btn"
-                    >
+                    <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>
                       <img src={item.addToCartIconPath} alt="Add to Cart" />
                       Add to Cart
                     </button>
