@@ -21,7 +21,6 @@ const Header = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Update cart count from localStorage or any other source when component mounts
     const cartCountFromStorage = parseInt(localStorage.getItem('cartCount')) || 0;
     setCartCount(cartCountFromStorage);
   }, []);
