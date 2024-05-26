@@ -14,12 +14,6 @@ const user = () => {
                 <h3>Email: {getLoggedInEmail()}</h3>
                 <Link to="/user/logout">Logout</Link>
             </div>
-            
-        </div>
-        
-
-
-
 
         </div>
      );
